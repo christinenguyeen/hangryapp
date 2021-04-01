@@ -11,8 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.example.hangryapp.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
 
@@ -30,6 +32,15 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        FloatingActionButton fabChoose = root.findViewById(R.id.fabChoose);
+        fabChoose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.fabChoose);
+            }
+        });
+      
         return root;
     }
 }
