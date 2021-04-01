@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hangry App</string>
+    <string name="title">Where to Eat?</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="food_name">Food!</string>
+    <string name="google_maps_key">AIzaSyDekX9uaATfQp0qomx_1fJwo3iRQ4K1o7U</string>
+</resources>
