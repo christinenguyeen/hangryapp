@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.fabChoose);
             }
         });
-
+      
         return root;
     }
 }
