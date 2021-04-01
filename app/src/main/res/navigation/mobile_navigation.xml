@@ -31,6 +31,7 @@
     <fragment
         android:id="@+id/nav_add_preference"
         android:name="com.example.hangryapp.ui.dashboard.AddPreferenceFragment"
+        android:label="Add New Preference"
         android:label="fragment_add_preference"
         tools:layout="@layout/fragment_add_preference" />
 </navigation>
