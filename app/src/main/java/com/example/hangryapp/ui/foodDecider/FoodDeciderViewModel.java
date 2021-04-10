@@ -1,16 +1,16 @@
-package com.example.hangryapp.ui.notifications;
+package com.example.hangryapp.ui.foodDecider;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class FoodDeciderViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public FoodDeciderViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is food decider fragment");
     }
 
     public LiveData<String> getText() {
