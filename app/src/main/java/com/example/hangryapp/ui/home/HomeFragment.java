@@ -37,10 +37,10 @@ public class HomeFragment extends Fragment {
         fabChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.fabChoose);
+                Navigation.findNavController(view).navigate(R.id.action_open_food_decider);
             }
         });
-      
+
         return root;
     }
 }

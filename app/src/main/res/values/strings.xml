@@ -3,6 +3,6 @@
     <string name="title">Where to Eat?</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_food_decider">Hangry</string>
     <string name="food_name">Food!</string>
 </resources>
