@@ -9,14 +9,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hangryapp.ApplicationViewModel;
 import com.example.hangryapp.R;
 
 public class PreferenceListAdapter extends RecyclerView.Adapter<PreferenceListAdapter.PreferenceListViewHolder>{
 
     private Context context;
+    private ApplicationViewModel viewModel;
 
     public PreferenceListAdapter(Context ct){
         context = ct;
+    }
+
+    public PreferenceListAdapter(Context ct, ApplicationViewModel vm){
+        context = ct;
+        viewModel = vm;
     }
 
     @NonNull
@@ -29,12 +36,24 @@ public class PreferenceListAdapter extends RecyclerView.Adapter<PreferenceListAd
 
     @Override
     public void onBindViewHolder(@NonNull PreferenceListViewHolder holder, int position) {
-        holder.pref_name_txt.setText(R.string.food_name);
+        //holder.pref_name_txt.setText(R.string.food_name);
+        holder.pref_name_txt.setText(viewModel.getPreferenceList().getValue().get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        //try {
+            return viewModel.getPreferenceList().getValue().size();
+        /*}
+        catch (NullPointerException e){
+            boolean observers = viewModel.getPreferenceList().hasActiveObservers();
+            System.out.println("ViewModel has observers? "+observers);
+            /*if(observers) {
+                viewModel.getPreferenceList().notify();
+            }
+            return 0;
+        }*/
+        //return 0;
     }
 
     public class PreferenceListViewHolder extends RecyclerView.ViewHolder{

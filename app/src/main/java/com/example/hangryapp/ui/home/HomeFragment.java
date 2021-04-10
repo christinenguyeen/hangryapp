@@ -7,40 +7,53 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
+import com.example.hangryapp.ApplicationViewModel;
 import com.example.hangryapp.R;
+import com.example.hangryapp.data.PreferenceData;
+import com.example.hangryapp.ui.mapsAndLocation.MapsFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        //ViewModel
+        ApplicationViewModel appViewModel = new ViewModelProvider(this).get(ApplicationViewModel.class);
+        appViewModel.getPreferenceList().observe(getViewLifecycleOwner(), new Observer<List<PreferenceData>>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onChanged(List<PreferenceData> preferenceData) {
+
             }
         });
+
+        View mapsFragment = root.findViewById(R.id.fragment_maps_host);
+        mapsFragment.setVisibility(View.GONE);
+
+        TextView textFoodChosen = root.findViewById(R.id.textFoodChosen);
+
+        CardView cardViewFoodChosen = root.findViewById(R.id.cardViewFoodChosen);
+        cardViewFoodChosen.setVisibility(View.GONE);
 
         FloatingActionButton fabChoose = root.findViewById(R.id.fabChoose);
         fabChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_open_food_decider);
+                mapsFragment.setVisibility(View.VISIBLE);
+                textFoodChosen.setText("Food Choice Here");
+                cardViewFoodChosen.setVisibility(View.VISIBLE);
             }
         });
-
+      
         return root;
     }
 }

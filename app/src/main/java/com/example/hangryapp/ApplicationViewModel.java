@@ -24,6 +24,7 @@ public class ApplicationViewModel extends AndroidViewModel {
 
     public LiveData<List<PreferenceData>> getPreferenceList(){
         return preferenceList;
+        //return mRepository.getAllPreferences();
     }
 
     public void insertPreference(PreferenceData preferenceData){

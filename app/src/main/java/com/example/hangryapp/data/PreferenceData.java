@@ -14,6 +14,7 @@ public class PreferenceData {
     @ColumnInfo(name = "id")
     private int id;
 
+    @NonNull
     @ColumnInfo(name = "name")
     private String name;
 
