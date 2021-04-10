@@ -41,7 +41,13 @@ public abstract class AppDatabase extends RoomDatabase {
             // comment out the following block
             databaseWriteExecutor.execute(() -> {
                 // Populate the database in the background.
-                // If you want to start with more words, just add them.
+                /*PreferenceDao preferenceDao = instance.preferenceDao();
+                System.out.println("Instantiating Preferences!!!");
+                preferenceDao.deleteAll();
+                preferenceDao.insertPreference(new PreferenceData("Thai"));
+                preferenceDao.insertPreference(new PreferenceData("Hamburger"));
+                System.out.println("Finished Instantiating Preferences!!!");*/
+                //System.out.println("Size is: "+preferenceDao.getAllPreferences().getValue().size());
             });
         }
     };
