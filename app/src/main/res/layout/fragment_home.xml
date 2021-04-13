@@ -45,7 +45,8 @@
         android:clickable="true"
         android:src="@drawable/ic_baseline_fastfood_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewFoodChosen"
