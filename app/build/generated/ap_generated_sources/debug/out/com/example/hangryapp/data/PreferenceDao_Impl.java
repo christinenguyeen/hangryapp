@@ -98,6 +98,18 @@ public final class PreferenceDao_Impl implements PreferenceDao {
   }
 
   @Override
+  public void insertPreferences(final List<PreferenceData> preferenceData) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfPreferenceData.insert(preferenceData);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
   public void insertPreference(final PreferenceData preferenceData) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
