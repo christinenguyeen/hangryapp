@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim bottom_down
 anim bottom_up
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
@@ -28,6 +29,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fade_in
+anim fade_out
 anim fragment_close_enter
 anim fragment_close_exit
 anim fragment_fade_enter
@@ -1750,6 +1753,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_add_24
 drawable ic_baseline_check_24
+drawable ic_baseline_close_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_fastfood_24
 drawable ic_clock_black_24dp
@@ -1865,6 +1869,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_open_add_preference
+id action_open_food_decider
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1931,6 +1936,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_pref_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -1956,6 +1962,7 @@ id easeIn
 id easeInOut
 id easeOut
 id editTextEnterPreference
+id editTextEnterPreference2
 id edit_query
 id elastic
 id end
@@ -1968,6 +1975,7 @@ id expand_activities_button
 id expanded_menu
 id fabAddNewPreference
 id fabChoose
+id fabFinishAddingPreference
 id fade
 id fill
 id fill_horizontal
@@ -2080,13 +2088,13 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_add_preference
 id nav_controller_view_tag
+id nav_food_decider
 id nav_host_fragment
 id nav_host_fragment_container
 id nav_view
 id navigation_dashboard
 id navigation_header_container
 id navigation_home
-id navigation_notifications
 id never
 id noScroll
 id none
@@ -2113,7 +2121,7 @@ id pin
 id position
 id postLayout
 id pref_name_txt
-id preference_list
+id preference_list2
 id progress_circular
 id progress_horizontal
 id radio
@@ -2206,10 +2214,10 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_notifications
 id text_title
 id textinput_counter
 id textinput_error
@@ -2329,9 +2337,9 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_add_preference
 layout fragment_dashboard
+layout fragment_food_decider
 layout fragment_home
 layout fragment_maps
-layout fragment_notifications
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2440,6 +2448,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_prefs
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2468,11 +2477,13 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string current_preferences
+string edit_prefs
 string enter_preference_name
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string finish_prefs
 string food_name
 string google_maps_key
 string hello_blank_fragment
@@ -2541,8 +2552,8 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string title
 string title_dashboard
+string title_food_decider
 string title_home
-string title_notifications
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

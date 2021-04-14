@@ -17,6 +17,9 @@ public interface PreferenceDao {
     @Insert
     void insertAll(PreferenceData... preferenceData);
 
+    @Insert
+    void insertPreferences(List<PreferenceData>preferenceData);
+
     @Query("DELETE FROM preferences")
     void deleteAll();
 

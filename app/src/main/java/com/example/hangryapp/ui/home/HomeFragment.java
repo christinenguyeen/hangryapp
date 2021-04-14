@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,37 +25,88 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    //private Boolean foodChosen;
+    private ApplicationViewModel appViewModel;
+    private View mapsFragment;
+    private CardView cardViewFoodChosen;
+    private TextView textFoodChosen;
+    private String foodChosen;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        //System.out.println("View Created! Boolean is "+foodChosen);
 
         //ViewModel
-        ApplicationViewModel appViewModel = new ViewModelProvider(this).get(ApplicationViewModel.class);
-        appViewModel.getPreferenceList().observe(getViewLifecycleOwner(), new Observer<List<PreferenceData>>() {
-            @Override
-            public void onChanged(List<PreferenceData> preferenceData) {
+        appViewModel = new ViewModelProvider(this).get(ApplicationViewModel.class);
+        appViewModel.getPreferenceList().observe(getViewLifecycleOwner(), preferenceData -> {
 
-            }
         });
 
-        View mapsFragment = root.findViewById(R.id.fragment_maps_host);
-        mapsFragment.setVisibility(View.GONE);
+        //food info
+        textFoodChosen = root.findViewById(R.id.textFoodChosen);
+        mapsFragment = root.findViewById(R.id.fragment_maps_host);
+        cardViewFoodChosen = root.findViewById(R.id.cardViewFoodChosen);
+        foodChosen = appViewModel.getFoodChosen();
 
-        TextView textFoodChosen = root.findViewById(R.id.textFoodChosen);
+        if(foodChosen==null) {
+            mapsFragment.setVisibility(View.GONE);
+            cardViewFoodChosen.setVisibility(View.GONE);
+        }
+        else {
+            textFoodChosen.setText(foodChosen);
+        }
 
-        CardView cardViewFoodChosen = root.findViewById(R.id.cardViewFoodChosen);
-        cardViewFoodChosen.setVisibility(View.GONE);
 
+        //fab
         FloatingActionButton fabChoose = root.findViewById(R.id.fabChoose);
-        fabChoose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mapsFragment.setVisibility(View.VISIBLE);
-                textFoodChosen.setText("Food Choice Here");
-                cardViewFoodChosen.setVisibility(View.VISIBLE);
-            }
+        fabChoose.setOnClickListener(view -> {
+            //String foodChosen = Christine's code;
+            foodChosen = "Food Choice Here";
+            appViewModel.setFoodChosen(foodChosen);
+            textFoodChosen.setText(foodChosen);
+            showItems();
         });
       
         return root;
     }
+
+    private void showItems(){
+        Animation showAnim = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+        cardViewFoodChosen.startAnimation(showAnim);
+        cardViewFoodChosen.setVisibility(View.VISIBLE);
+        mapsFragment.startAnimation(showAnim);
+        mapsFragment.setVisibility(View.VISIBLE);
+    }
+
+
+    /*Override
+    public void onDestroyView () {
+        System.out.println("View Destroyed! Boolean is "+foodChosen);
+        if(foodChosen) {
+            super.onDestroyView();
+            foodChosen = true;
+        }
+        else {
+            super.onDestroyView();
+        }
+    }*/
+
+    /*@Override
+    public void onResume (){
+        System.out.println("View Resumed!");
+        if (foodChosen){
+            showItems();
+        }
+        super.onResume();
+    }
+
+    @Override
+    public void onStart(){
+        System.out.println("View Started!");
+        if (foodChosen){
+            showItems();
+        }
+        super.onStart();
+    }*/
 }

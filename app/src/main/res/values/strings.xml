@@ -5,8 +5,11 @@
     <string name="title_dashboard">Preferences</string>
     <string name="title_food_decider">Hangry</string>
     <string name="food_name">Food!</string>
-    <string name="no_food">...</string>
-    <string name="enter_preference_name">Enter Preference Name</string>
+    <string name="no_food">…</string>
+    <string name="enter_preference_name">Enter Food Preference</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="current_preferences">Current Preferences:</string>
+    <string name="current_preferences">Current Food Preferences:</string>
+    <string name="edit_prefs">Edit</string>
+    <string name="add_prefs">Add New</string>
+    <string name="finish_prefs">Finish</string>
 </resources>

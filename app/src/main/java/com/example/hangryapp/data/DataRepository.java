@@ -21,20 +21,18 @@ public class DataRepository {
     }
 
     public void insertPreference(PreferenceData preferenceData) {
-        AppDatabase.databaseWriteExecutor.execute(() -> {
-            preferenceDao.insertPreference(preferenceData);
-        });
+        AppDatabase.databaseWriteExecutor.execute(() -> preferenceDao.insertPreference(preferenceData));
+    }
+
+    public void insertPreferences(List<PreferenceData> preferenceData) {
+        AppDatabase.databaseWriteExecutor.execute(() -> preferenceDao.insertPreferences(preferenceData));
     }
 
     public void updatePreference(PreferenceData preferenceData) {
-        AppDatabase.databaseWriteExecutor.execute(() -> {
-            preferenceDao.updatePreference(preferenceData);
-        });
+        AppDatabase.databaseWriteExecutor.execute(() -> preferenceDao.updatePreference(preferenceData));
     }
 
     public void deletePreference(PreferenceData preferenceData) {
-        AppDatabase.databaseWriteExecutor.execute(() -> {
-            preferenceDao.deletePreference(preferenceData);
-        });
+        AppDatabase.databaseWriteExecutor.execute(() -> preferenceDao.deletePreference(preferenceData));
     }
 }

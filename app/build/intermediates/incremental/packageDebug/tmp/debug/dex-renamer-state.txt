@@ -1,4 +1,4 @@
-#Fri Apr 09 20:05:14 EDT 2021
-base.0=C\:\\Users\\990FX\\AndroidStudioProjects\\hangryapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Wed Apr 14 13:30:29 EDT 2021
+base.0=C\:\\Users\\jacks\\AndroidStudioProjects\\hangryapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
