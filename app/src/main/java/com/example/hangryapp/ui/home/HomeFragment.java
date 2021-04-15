@@ -1,5 +1,7 @@
 package com.example.hangryapp.ui.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,6 +66,13 @@ public class HomeFragment extends Fragment {
         fabChoose.setOnClickListener(view -> {
             showItems();
             selectPreference();
+            if (foodChosen != null) {
+                String url = "http://maps.google.co.in/maps?q=" + foodChosen;
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(url));
+                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+                startActivity(intent);
+            }
+
             /*String[] list;
             // converts user preference list to array
             list = appViewModel.getPreferenceList().getValue().toString().split("[\n\t\r.,;:!?(){]");
@@ -77,7 +86,7 @@ public class HomeFragment extends Fragment {
             appViewModel.setFoodChosen(foodChosen);
             textFoodChosen.setText(foodChosen);*/
         });
-      
+
         return root;
     }
 
