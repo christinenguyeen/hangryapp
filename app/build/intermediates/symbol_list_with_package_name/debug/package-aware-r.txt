@@ -2121,6 +2121,7 @@ id pin
 id position
 id postLayout
 id pref_name_txt
+id preference_list
 id preference_list2
 id progress_circular
 id progress_horizontal
@@ -2218,6 +2219,7 @@ id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_notifications
 id text_title
 id textinput_counter
 id textinput_error

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\5398c332bcdea5d804d3f8bbc2a4005c\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\0b040ae6fd7360855475a012c5af81a6\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\73327337a728e12c5c3cdecdb4b7e327\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -58,20 +58,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\634f2f03e50a0eb4514a8d791ceb2f13\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\054d779a91766207571d826869795163\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\3fd5b4b866d23b43b0e15439a0ee99e7\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-45:12
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:2:11-69
@@ -79,18 +79,22 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
 		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:11:5-85
+	android:name
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:11:22-82
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:11:5-80
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:12:5-66
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:13:5-66
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\8dd8e7c17a85a0661f86487a4c192d89\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\8dd8e7c17a85a0661f86487a4c192d89\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:12:22-64
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:13:22-64
 application
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:14:5-43:19
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:15:5-44:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\0b040ae6fd7360855475a012c5af81a6\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\0b040ae6fd7360855475a012c5af81a6\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\73327337a728e12c5c3cdecdb4b7e327\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -112,39 +116,39 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ja
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\jacks\.gradle\caches\transforms-2\files-2.1\8dbd859d1cd89239b42e7382b4fc40d7\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:19:9-54
 	android:icon
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:17:9-43
 	android:allowBackup
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:20:9-47
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:21:9-47
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:30:9-32:55
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:31:9-33:55
 	android:value
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:32:13-52
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:33:13-52
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:32:13-58
 activity#com.example.hangryapp.MainActivity
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:34:9-42:20
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:35:9-43:20
 	android:label
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:37:13-45
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:36:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:37:13-41:29
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:40:17-77
+ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:40:27-74
+		ADDED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml:41:27-74
 uses-sdk
 INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\jacks\AndroidStudioProjects\hangryapp\app\src\main\AndroidManifest.xml

@@ -3,7 +3,6 @@ package com.example.hangryapp.ui.dashboard;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,8 +19,6 @@ import com.example.hangryapp.data.PreferenceData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 public class AddPreferenceFragment extends DashboardFragment {
 
@@ -40,7 +37,7 @@ public class AddPreferenceFragment extends DashboardFragment {
         appViewModel.getPreferenceList().observe(getViewLifecycleOwner(), preferenceData -> listAdapter.notifyDataSetChanged());
 
         //Preference List
-        recyclerView = root.findViewById(R.id.preference_list2);
+        recyclerView = root.findViewById(R.id.preference_list);
         listAdapter = new PreferenceListAdapter(getContext(), appViewModel);
         recyclerView.setAdapter(listAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

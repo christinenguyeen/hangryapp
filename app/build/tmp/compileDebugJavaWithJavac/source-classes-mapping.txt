@@ -7,6 +7,7 @@ com/example/hangryapp/deprecated/DashboardViewModel.java
  com.example.hangryapp.deprecated.DashboardViewModel
 com/example/hangryapp/ui/foodDecider/FoodDeciderFragment.java
  com.example.hangryapp.ui.foodDecider.FoodDeciderFragment
+ com.example.hangryapp.ui.foodDecider.FoodDeciderFragment$1
 com/example/hangryapp/data/Converters.java
  com.example.hangryapp.data.Converters
 com/example/hangryapp/deprecated/HomeViewModel.java

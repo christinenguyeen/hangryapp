@@ -72,8 +72,12 @@
 
             <TextView
                 android:id="@+id/textFoodChosen"
-                android:layout_width="243dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:gravity="center_horizontal"
                 android:text="@string/no_food"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"

@@ -23,7 +23,7 @@ public class PreferenceData {
     }
 
     @Ignore
-    public PreferenceData(String name){
+    public PreferenceData(@NotNull String name){
         this.name = name;
     }
 
@@ -35,15 +35,17 @@ public class PreferenceData {
         this.id = id;
     }
 
+    @NotNull
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@NotNull String name) {
         this.name = name;
     }
 
+    @NotNull
     public String toString() {
-        return this.name;
+        return getName();
     }
 }

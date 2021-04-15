@@ -18,7 +18,6 @@ import android.widget.EditText;
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,9 +28,6 @@ import com.example.hangryapp.R;
 import com.example.hangryapp.data.PreferenceData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.List;
 
 public class DashboardFragment extends Fragment {
 
@@ -50,15 +46,9 @@ public class DashboardFragment extends Fragment {
 
         //ViewModel
         appViewModel = new ViewModelProvider(this.requireActivity()).get(ApplicationViewModel.class);
-        /*appViewModel.getPreferenceList().observe(getViewLifecycleOwner(), new Observer<List<PreferenceData>>() {
-            @Override
-            public void onChanged(List<PreferenceData> preferenceData) {
-                listAdapter.notifyDataSetChanged();
-            }
-        });*/
 
         //Preference List
-        recyclerView = root.findViewById(R.id.preference_list2);
+        recyclerView = root.findViewById(R.id.preference_list);
         listAdapter = new PreferenceListAdapter(getContext(), appViewModel);
         recyclerView.setAdapter(listAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());

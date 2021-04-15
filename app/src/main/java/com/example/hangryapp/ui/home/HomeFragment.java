@@ -62,7 +62,9 @@ public class HomeFragment extends Fragment {
         //fab
         FloatingActionButton fabChoose = root.findViewById(R.id.fabChoose);
         fabChoose.setOnClickListener(view -> {
-            String[] list;
+            showItems();
+            selectPreference();
+            /*String[] list;
             // converts user preference list to array
             list = appViewModel.getPreferenceList().getValue().toString().split("[\n\t\r.,;:!?(){]");
             // removes all special characters from array
@@ -70,15 +72,26 @@ public class HomeFragment extends Fragment {
                 list[i] = list[i].replaceAll("\\[", "").replaceAll("\\]","");
             }
             // randomly chooses food from array
-            String foodChosen = "";
             int random = (int)(Math.random()*list.length);
             foodChosen = list[random];
             appViewModel.setFoodChosen(foodChosen);
-            textFoodChosen.setText(foodChosen);
-            showItems();
+            textFoodChosen.setText(foodChosen);*/
         });
       
         return root;
+    }
+
+    private void selectPreference(){
+        List<PreferenceData> preferenceList =  appViewModel.getPreferenceList().getValue();
+        if(preferenceList!=null && preferenceList.size()!=0) {
+            int random = (int) (Math.random() * preferenceList.size());
+            foodChosen = preferenceList.get(random).getName();
+        }
+        else {
+            foodChosen = "No Preferences to Choose From";
+        }
+        appViewModel.setFoodChosen(foodChosen);
+        textFoodChosen.setText(foodChosen);
     }
 
     private void showItems(){
