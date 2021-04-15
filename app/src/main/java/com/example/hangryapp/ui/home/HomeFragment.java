@@ -21,6 +21,7 @@ import com.example.hangryapp.data.PreferenceData;
 import com.example.hangryapp.ui.mapsAndLocation.MapsFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
@@ -61,8 +62,17 @@ public class HomeFragment extends Fragment {
         //fab
         FloatingActionButton fabChoose = root.findViewById(R.id.fabChoose);
         fabChoose.setOnClickListener(view -> {
-            //String foodChosen = Christine's code;
-            foodChosen = "Food Choice Here";
+            String[] list;
+            // converts user preference list to array
+            list = appViewModel.getPreferenceList().getValue().toString().split("[\n\t\r.,;:!?(){]");
+            // removes all special characters from array
+            for (int i = 0; i < list.length; i++) {
+                list[i] = list[i].replaceAll("\\[", "").replaceAll("\\]","");
+            }
+            // randomly chooses food from array
+            String foodChosen = "";
+            int random = (int)(Math.random()*list.length);
+            foodChosen = list[random];
             appViewModel.setFoodChosen(foodChosen);
             textFoodChosen.setText(foodChosen);
             showItems();
