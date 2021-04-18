@@ -12,4 +12,5 @@
     <string name="edit_prefs">Edit</string>
     <string name="add_prefs">Add New</string>
     <string name="finish_prefs">Finish</string>
+    <string name="find_maps">Search on Google Maps</string>
 </resources>

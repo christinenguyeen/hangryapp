@@ -153,8 +153,7 @@ public class DashboardFragment extends Fragment {
             slideDown(editTextEnterPreference);
             navBar.startAnimation(bottomDown);
             navBar.setVisibility(View.GONE);
-            editTextEnterPreference.requestFocus();
-            openKeyboard(view);
+            openKeyboard(editTextEnterPreference);
         }
 
         listAdapter.setEditMode(editMode);
@@ -169,7 +168,7 @@ public class DashboardFragment extends Fragment {
     }
 
     protected void openKeyboard(View view) {
-        if (view != null) {
+        if (view.requestFocus()) {
             InputMethodManager manager = (InputMethodManager) requireActivity()
                     .getSystemService(Context.INPUT_METHOD_SERVICE);
             manager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
