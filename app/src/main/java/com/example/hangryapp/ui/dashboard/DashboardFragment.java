@@ -106,21 +106,11 @@ public class DashboardFragment extends Fragment {
     private boolean addNewPreference(){
         String preferenceName = editTextEnterPreference.getText().toString();
 
-        if(preferenceName!=null && !preferenceName.equals("") && !preferenceName.equals(" ")){
+        if(!preferenceName.equals("") && !preferenceName.equals(" ")){
             PreferenceData preferenceData = new PreferenceData(preferenceName);
-            /*appViewModel.insertPreference(preferenceData);
-            listAdapter.notifyItemInserted(listAdapter.getItemCount());*/
             listAdapter.newItem(preferenceData);
             editTextEnterPreference.getText().clear();
-            fabAddNewPreference.setIconResource(R.drawable.ic_baseline_check_24);
-            fabAddNewPreference.setText(getText(R.string.finish_prefs));
-            /*LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-            layoutManager.scrollToPositionWithOffset(listAdapter.getItemCount()+1, 0);*/
             recyclerView.scrollToPosition(listAdapter.getItemCount() - 1);
-            /*listAdapter.notifyItemInserted(0);
-            LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-            layoutManager.scrollToPositionWithOffset(0, 0);*/
-            //editTextEnterPreference.requestFocus();
 
             return true;
         }
@@ -137,8 +127,8 @@ public class DashboardFragment extends Fragment {
 
         if(editMode) {
             editMode = false;
+
             closeKeyboard(view);
-            //fabAddNewPreference.setImageResource(R.drawable.ic_baseline_edit_24);
             fabAddNewPreference.setIconResource(R.drawable.ic_baseline_edit_24);
             fabAddNewPreference.setText(getText(R.string.edit_prefs));
             slideUp(editTextEnterPreference);
@@ -147,7 +137,7 @@ public class DashboardFragment extends Fragment {
         }
         else {
             editMode = true;
-            //fabAddNewPreference.setImageResource(R.drawable.ic_baseline_check_24);
+
             fabAddNewPreference.setIconResource(R.drawable.ic_baseline_check_24);
             fabAddNewPreference.setText(getText(R.string.finish_prefs));
             slideDown(editTextEnterPreference);
@@ -279,3 +269,24 @@ String strUserName = etUserName.getText().toString();
                     fabAddNewPreference.setIconResource(R.drawable.ic_baseline_add_24);
                     fabAddNewPreference.setText(getText(R.string.add_prefs));
                 }*/
+/*
+        if(preferenceName!=null && !preferenceName.equals("") && !preferenceName.equals(" ")){
+            PreferenceData preferenceData = new PreferenceData(preferenceName);
+            /*appViewModel.insertPreference(preferenceData);
+            listAdapter.notifyItemInserted(listAdapter.getItemCount());*/
+//System.out.println("New Item: "+preferenceName);
+            /*listAdapter.newItem(preferenceData);
+                    editTextEnterPreference.getText().clear();*/
+                    //fabAddNewPreference.setIconResource(R.drawable.ic_baseline_check_24);
+                    //fabAddNewPreference.setText(getText(R.string.finish_prefs));
+            /*LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+            layoutManager.scrollToPositionWithOffset(listAdapter.getItemCount()+1, 0);*/
+                    //recyclerView.scrollToPosition(listAdapter.getItemCount() - 1);
+            /*listAdapter.notifyItemInserted(0);
+            LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+            layoutManager.scrollToPositionWithOffset(0, 0);*/
+                    //editTextEnterPreference.requestFocus();
+
+                    /*return true;
+                    }
+ */

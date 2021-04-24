@@ -38,6 +38,9 @@ public class PreferenceListAdapter extends RecyclerView.Adapter<PreferenceListAd
         if(viewModel.getPreferenceList().getValue()!=null){
             DataSet = viewModel.getPreferenceList().getValue();
         }
+        else {
+            DataSet = new ArrayList<>();
+        }
     }
 
     @NonNull
@@ -50,11 +53,11 @@ public class PreferenceListAdapter extends RecyclerView.Adapter<PreferenceListAd
 
     @Override
     public void onBindViewHolder(@NonNull PreferenceListViewHolder holder, int position) {
-        //holder.pref_name_txt.setText(R.string.food_name);
-        //holder.pref_name_txt.setText(viewModel.getPreferenceList().getValue().get(position).getName());
         holder.pref_name_txt.setText(DataSet.get(position).getName());
+
         if (editMode){
             holder.delete_pref_button.setVisibility(View.VISIBLE);
+            //delete action
             holder.delete_pref_button.setOnClickListener(view -> {
                 //viewModel.deletePreference(viewModel.getPreferenceList().getValue().get(position));
                 int pos = holder.getAdapterPosition();
@@ -71,26 +74,16 @@ public class PreferenceListAdapter extends RecyclerView.Adapter<PreferenceListAd
 
     @Override
     public int getItemCount() {
-        //try {
-        //return viewModel.getPreferenceList().getValue().size();
         return DataSet.size();
-        /*}
-        catch (NullPointerException e){
-            boolean observers = viewModel.getPreferenceList().hasActiveObservers();
-            System.out.println("ViewModel has observers? "+observers);
-            /*if(observers) {
-                viewModel.getPreferenceList().notify();
-            }
-            return 0;
-        }*/
-        //return 0;
     }
 
     public void setEditMode(boolean mode){
         editMode = mode;
         notifyDataSetChanged();
         if(!editMode){
+            //System.out.println("New Items Added!");
             viewModel.insertPreferences(newItems);
+            //newItems.clear();
         }
     }
 
